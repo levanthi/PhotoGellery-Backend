@@ -1,5 +1,5 @@
 const corsOptions = {
-  origin: '*',
+  origin: 'https://levanthi.github.io',
 };
 
 export default corsOptions;
