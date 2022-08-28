@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "git": "^0.1.5",
+    "mongodb": "^4.9.0",
+    "mongoose": "^6.5.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levanthi/PhotoGellery-Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/levanthi/PhotoGellery-Backend/issues"
+  },
+  "homepage": "https://github.com/levanthi/PhotoGellery-Backend#readme",
+  "description": ""
+}
