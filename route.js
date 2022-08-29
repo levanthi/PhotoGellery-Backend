@@ -59,5 +59,4 @@ router.delete('/:slug', (req, res) => {
     })
     .catch((err) => res.send(false));
 });
-
 export default router;
