@@ -49,4 +49,15 @@ router.post('/uploads', upload.array('photo', 99), (req, res) => {
     console.log(new Error('No file detected!'));
   }
 });
+
+router.delete('/:slug', (req, res) => {
+  const id = req.params.slug;
+  photoModel
+    .deleteOne({ _id: id })
+    .then((data) => {
+      res.send(true);
+    })
+    .catch((err) => res.send(false));
+});
+
 export default router;
