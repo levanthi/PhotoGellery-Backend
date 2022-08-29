@@ -28,4 +28,25 @@ router.post('/upload', upload.single('photo'), (req, res) => {
     console.log(new Error('No file detected!'));
   }
 });
+
+router.post('/uploads', upload.array('photo', 99), (req, res) => {
+  if (req.files) {
+    const photos = req.files.map((file) => {
+      return {
+        contentType: file.mimetype,
+        data: fs.readFileSync(file.path),
+      };
+    });
+    photoModel
+      .insertMany(photos)
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  } else {
+    console.log(new Error('No file detected!'));
+  }
+});
 export default router;
